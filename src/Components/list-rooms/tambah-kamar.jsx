@@ -24,7 +24,9 @@ export default function TambahKamarForm() {
       statusId,
     };
 
-    fetch(`${import.meta.env.VITE_ADDR_API}/rooms`, {
+
+    fetch("https://backendappmyhotel.vercel.app/rooms", {
+
       method: "POST",
       headers: {
         "content-type": "application/json",

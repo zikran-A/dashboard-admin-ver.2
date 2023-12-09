@@ -17,7 +17,9 @@ export default function AdministratorPage() {
   }, [isLoading]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_ADDR_API}/users`, {
+
+    fetch("https://backendappmyhotel.vercel.app/users/", {
+
       headers: {
         Authorization: `Bearer ${auth.isAuthenticated()}`,
       },
