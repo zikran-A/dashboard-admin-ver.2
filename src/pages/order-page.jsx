@@ -57,7 +57,9 @@ export default function PesanKamarPage() {
       fotoCustomer,
     };
 
-    fetch(`${import.meta.env.VITE_ADDR_API}/booking`, {
+
+    fetch("https://backendappmyhotel.vercel.app/booking", {
+
       method: "POST",
       headers: {
         "Content-Type": "application/json",

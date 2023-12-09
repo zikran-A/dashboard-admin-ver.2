@@ -4,7 +4,9 @@ import auth from "../../utils/auth";
 export default function ListTable({ dataHotel }) {
   const Removefunction = (id) => {
     if (window.confirm("Do you want to remove?")) {
-      fetch(`${import.meta.env.VITE_ADDR_API}/rooms/${id}`, {
+
+      fetch("https://backendappmyhotel.vercel.app/rooms/" + id, {
+
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${auth.isAuthenticated()}`,
