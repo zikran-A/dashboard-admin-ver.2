@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../utils/auth";
 import SelectCategory from "../select-options/SelectCategory";
@@ -24,7 +24,7 @@ export default function TambahKamarForm() {
       statusId,
     };
 
-    fetch("http://localhost:2000/rooms", {
+    fetch(`${import.meta.env.VITE_ADDR_API}/rooms`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 import auth from "../utils/auth";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function LoginPage() {
     })
       .then((res) => res.json())
       .then(setLogin)
-      .catch(() => alert("database not conected..."));
+      .catch(() => toast.error("database not conected..."));
   };
   useEffect(() => {
     if (login) {
