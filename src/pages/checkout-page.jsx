@@ -28,6 +28,7 @@ export default function CheckinKamarPage() {
         refetch()
       })
   }
+  
   return (
     <div className='w-full'>
       <Toaster />
@@ -85,7 +86,9 @@ export default function CheckinKamarPage() {
                       tanggalCheck={item.checkOut}
                       btnDetail={() => handleDetail(item.idTransaction)}
                       btnCheck={() => handleCheck(item?.idTransaction)}
-                      btnReBook={() => {}}
+                      btnReBook={() => {
+                        navigate(`/rebook/${item.idTransaction}`)
+                      }}
                     />
                   ))
                 ) : (
