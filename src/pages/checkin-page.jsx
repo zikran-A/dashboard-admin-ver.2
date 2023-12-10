@@ -10,6 +10,7 @@ export default function CheckinKamarPage() {
   const { data, isLoading, refetch } = useGetDataCheck(
     `${import.meta.env.VITE_ADDR_API}/check/in`
   );
+  console.log(data)
   const handleDetail = (id) => {
     navigate(`/checkin/${id}`);
   };

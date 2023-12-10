@@ -24,6 +24,7 @@ import DetailCategory from "../Components/category/detail-category";
 import EditCategory from "../Components/category/edit-category";
 import AdminAdd from "../Components/administrator/adminAdd";
 import AdminEdit from "../Components/administrator/adminEdit";
+import Rebook from '../pages/rebook'
 
 export default function Router() {
   return (
@@ -52,6 +53,7 @@ export default function Router() {
           <Route path="/checkin/:id" element={<DetailCheckin />} />
           <Route path="/checkout" element={<CheckoutKamarpage />} />
           <Route path="/checkout/:id" element={<DetailCheckin />} />
+          <Route path="/rebook/:id" element={<Rebook />} />
           <Route path="/report" element={<LaporanPage />} />
         </Route>
       </Route>

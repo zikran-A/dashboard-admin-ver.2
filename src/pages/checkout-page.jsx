@@ -28,10 +28,11 @@ export default function CheckinKamarPage() {
     })
       .then((res) => res.json())
       .then(() => {
-        toast.success("check out success");
-        refetch();
-      });
-  };
+        toast.success('check out success')
+        refetch()
+      })
+  }
+  
   return (
     <div className="w-full">
       <main className="bg-primary-gray grow overflow-y-auto">
@@ -88,7 +89,9 @@ export default function CheckinKamarPage() {
                       tanggalCheck={item.checkOut}
                       btnDetail={() => handleDetail(item.idTransaction)}
                       btnCheck={() => handleCheck(item?.idTransaction)}
-                      btnReBook={() => {}}
+                      btnReBook={() => {
+                        navigate(`/rebook/${item.idTransaction}`)
+                      }}
                     />
                   ))
                 ) : (
